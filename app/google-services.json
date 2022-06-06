@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "569227743100",
+    "firebase_url": "https://bittner-capstone-default-rtdb.firebaseio.com",
+    "project_id": "bittner-capstone",
+    "storage_bucket": "bittner-capstone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:569227743100:android:6f1079b371fac78278def9",
+        "android_client_info": {
+          "package_name": "com.example.bittnercapstone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "569227743100-aap9npkji18p6553k1ffcfgc15jqnu69.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8dJvPbym96Us6T4cXnpM62bVRVyuhWUU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "569227743100-aap9npkji18p6553k1ffcfgc15jqnu69.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

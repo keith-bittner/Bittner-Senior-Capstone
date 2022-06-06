@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">BittnerCapstone</string>
+    <string name="logo_desc">NW Lawn Maintenance</string>
+    <string name="referral">Referral</string>
+    <string name="main_login">Employee / Management Login</string>
+    <string name="copyright">Copyright 2022. NW Lawn Maintenance</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login_button">Login</string>
+    <string name="emp_land">You made it to the employee section!</string>
+    <string name="manager_land">You made it to the manager section!</string>
+</resources>
