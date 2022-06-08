@@ -3,6 +3,7 @@ package com.example.bittnercapstone
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -27,7 +28,7 @@ class AccountLogin : AppCompatActivity() {
         user = CurrentEmployee()
 
         man_username = this.findViewById(R.id.login_username)
-        man_password = findViewById(R.id.login_username)
+        man_password = findViewById(R.id.login_userpass)
         login_submit = findViewById(R.id.login_button)
 
         login_auth = FirebaseAuth.getInstance()
@@ -48,13 +49,14 @@ class AccountLogin : AppCompatActivity() {
                 val intent = Intent(this, ManagerMain::class.java)
                 startActivity(intent)
             } else {
-                Toast.makeText(this, "Login failed!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Login failed1!", Toast.LENGTH_SHORT).show()
             }
         }
         man_username.setText("")
         man_password.setText("")
     }
     private fun loginEmployee() {
+
         val username = man_username.text.toString()
         val password = man_password.text.toString()
         login_auth.signInWithEmailAndPassword(username, password).addOnCompleteListener(this) {
@@ -62,7 +64,7 @@ class AccountLogin : AppCompatActivity() {
                 val intent = Intent(this, EmployeeMain::class.java)
                 startActivity(intent)
             } else {
-                Toast.makeText(this, "Login failed!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Login failed1!", Toast.LENGTH_SHORT).show()
             }
         }
         man_username.setText("")
@@ -79,8 +81,7 @@ class AccountLogin : AppCompatActivity() {
             @SuppressLint("SetTextI18n")
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 if (dataSnapshot.exists()) {
-                    val email = dataSnapshot.child("email").value.toString()
-
+                    user.email = dataSnapshot.child("email").value.toString()
                     if (email == user.email) {
                         user.firstname = dataSnapshot.child("firstname").value.toString()
                         user.ismanager = dataSnapshot.child("ismanager").value as Boolean
@@ -91,10 +92,10 @@ class AccountLogin : AppCompatActivity() {
                             loginEmployee()
                         }
                     } else {
-                        Toast.makeText(this@AccountLogin, "Credentials are not valid!", Toast.LENGTH_SHORT ).show()
+                        Toast.makeText(this@AccountLogin, "Credentials are not valid1!", Toast.LENGTH_SHORT ).show()
                     }
                 } else {
-                    Toast.makeText(this@AccountLogin, "Credentials are not valid!", Toast.LENGTH_SHORT ).show()
+                    Toast.makeText(this@AccountLogin, "Credentials are not valid2!", Toast.LENGTH_SHORT ).show()
                 }
             }
             override fun onCancelled(error: DatabaseError) {
