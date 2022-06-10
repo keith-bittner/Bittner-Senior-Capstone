@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/workday_date"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="@string/date"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/workday_time"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_toEndOf="@id/workday_date"
+        android:layout_toRightOf="@id/workday_date"
+        android:gravity="center"
+        android:text="@string/time"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/workday_customer"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_toEndOf="@id/workday_time"
+        android:layout_toRightOf="@id/workday_time"
+        android:text="@string/customer" />
+
+    <TextView
+        android:id="@+id/workday_status"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_toEndOf="@id/workday_customer"
+        android:layout_toRightOf="@id/workday_customer"
+        android:gravity="center"
+        android:text="@string/status"
+        android:textColor="@color/black" />
+</RelativeLayout>

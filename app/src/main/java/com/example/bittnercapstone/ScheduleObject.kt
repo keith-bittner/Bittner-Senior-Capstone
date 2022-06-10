@@ -6,12 +6,11 @@ class ScheduleObject (
     var date: String,
     var start: String,
     var customer: String,
-    var worker: String,
     var status: String ) : Serializable {
 
-    constructor() : this("", "" , "", "", "")
+    constructor() : this("", "" , "", "")
 
     override fun toString(): String {
-        return "$date $start $customer $worker $status"
+        return "$date $start $customer $status"
     }
 }
