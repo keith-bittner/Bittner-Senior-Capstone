@@ -32,9 +32,9 @@ class EmployeeWorkday : AppCompatActivity() {
     }
 
     private fun getSchedule() {
-        val path = "schedule"
+        //val path = "schedule"
 
-        databaseRef = FirebaseDatabase.getInstance().getReference(path)
+        databaseRef = FirebaseDatabase.getInstance().getReference("schedule")
 
         databaseRef.addValueEventListener(object : ValueEventListener {
             @SuppressLint("SetTextI18n")
@@ -43,14 +43,13 @@ class EmployeeWorkday : AppCompatActivity() {
                 if (dataSnapshot.exists()) {
                     for (schedule in dataSnapshot.children.iterator()) {
                         val scheduleData = ScheduleObject()
-                        val parent = "S" + schedule
-                        scheduleData.date = schedule.child(parent).child("date").value.toString()
-                        scheduleData.start = schedule.child(parent).child("start").value.toString()
-                        scheduleData.customer = schedule.child(parent).child("customer").value.toString()
-                        scheduleData.status = schedule.child(parent).child("status").value.toString()
+                        scheduleData.date = schedule.child("date").value.toString()
+                        scheduleData.start = schedule.child("start").value.toString()
+                        scheduleData.customer = schedule.child("customer").value.toString()
+                        scheduleData.status = schedule.child("status").value.toString()
                         scheduledList.add(scheduleData)
                         val myadapter = EmpWorkdayAdapter(applicationContext, scheduledList)
-                        scheduleTable!!.adapter = myadapter
+                        scheduleTable.adapter = myadapter
                     }
                 } else {
                     Toast.makeText(this@EmployeeWorkday, "You Screwed the pooch!", Toast.LENGTH_SHORT ).show()
