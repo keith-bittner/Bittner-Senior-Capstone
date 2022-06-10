@@ -18,9 +18,10 @@ class EmployeeWorkday : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.schedule_menu)
+        setContentView(R.layout.employee_workday)
 
         scheduleTable = findViewById(R.id.list_view)
+        scheduledList = mutableListOf()
 
         getSchedule()
         home_button = findViewById(R.id.emp_main_button)
@@ -42,13 +43,14 @@ class EmployeeWorkday : AppCompatActivity() {
                 if (dataSnapshot.exists()) {
                     for (schedule in dataSnapshot.children.iterator()) {
                         val scheduleData = ScheduleObject()
-                        scheduleData.date = schedule.child("S$schedule/date").value.toString()
-                        scheduleData.start = schedule.child("S$schedule/start").value.toString()
-                        scheduleData.customer = schedule.child("S$schedule/customer").value.toString()
-                        scheduleData.status = schedule.child("S$schedule/status").value.toString()
+                        val parent = "S" + schedule
+                        scheduleData.date = schedule.child(parent).child("date").value.toString()
+                        scheduleData.start = schedule.child(parent).child("start").value.toString()
+                        scheduleData.customer = schedule.child(parent).child("customer").value.toString()
+                        scheduleData.status = schedule.child(parent).child("status").value.toString()
                         scheduledList.add(scheduleData)
                         val myadapter = EmpWorkdayAdapter(applicationContext, scheduledList)
-                        scheduleTable.adapter = myadapter
+                        scheduleTable!!.adapter = myadapter
                     }
                 } else {
                     Toast.makeText(this@EmployeeWorkday, "You Screwed the pooch!", Toast.LENGTH_SHORT ).show()
