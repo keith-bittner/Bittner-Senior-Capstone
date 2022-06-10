@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/custom_grey"
-    tools:context=".EmployeeMain">
+    tools:context=".ScheduleMenu">
 
     <ImageView
         android:id="@+id/logo_nwlawn"
@@ -22,54 +22,57 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/landing_msg"
-        android:layout_width="375dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="20dp"
-        android:text="@string/landing_msg"
-        android:textColor="#3E2723"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo_nwlawn" />
-
-    <TextView
-        android:id="@+id/profile_preview"
+        android:id="@+id/menu_title1"
         android:layout_width="300dp"
-        android:layout_height="200dp"
+        android:layout_height="50dp"
         android:layout_marginStart="55dp"
-        android:layout_marginTop="21dp"
         android:layout_marginEnd="56dp"
-        android:text="@string/profile_preview"
-        android:textColor="#3E2723"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/landing_msg" />
-
-    <Button
-        android:id="@+id/update_button"
-        android:layout_width="200dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="105dp"
-        android:layout_marginEnd="106dp"
-        android:layout_marginBottom="21dp"
-        android:backgroundTint="@color/green_1"
-        android:text="@string/update_button"
-        android:textColor="#4E342E"
-        app:layout_constraintBottom_toTopOf="@+id/schedule_button"
+        android:layout_marginBottom="32dp"
+        android:text="@string/menu_title1"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/current_week_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/schedule_button"
+        android:id="@+id/current_week_button"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginStart="105dp"
-        android:layout_marginEnd="106dp"
-        android:layout_marginBottom="21dp"
+        android:layout_marginStart="106dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginBottom="32dp"
         android:backgroundTint="@color/green_1"
-        android:text="@string/schedule_button"
+        android:text="@string/current_week_button"
+        android:textColor="#4E342E"
+        app:layout_constraintBottom_toTopOf="@+id/workday_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/workday_button"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="106dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/green_1"
+        android:text="@string/workday_button"
+        android:textColor="#4E342E"
+        app:layout_constraintBottom_toTopOf="@+id/emp_main_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/emp_main_button"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="106dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/green_1"
+        android:text="@string/emp_main_button"
         android:textColor="#4E342E"
         app:layout_constraintBottom_toTopOf="@+id/logout_button"
         app:layout_constraintEnd_toEndOf="parent"
@@ -79,15 +82,14 @@
         android:id="@+id/logout_button"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginStart="105dp"
-        android:layout_marginEnd="106dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginStart="106dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginBottom="32dp"
         android:backgroundTint="@color/green_1"
         android:text="@string/logout_button"
         android:textColor="#4E342E"
         app:layout_constraintBottom_toTopOf="@+id/copyright"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView

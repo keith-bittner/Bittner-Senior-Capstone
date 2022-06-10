@@ -9,4 +9,17 @@
     <string name="login_button">Login</string>
     <string name="emp_land">You made it to the employee section!</string>
     <string name="manager_land">You made it to the manager section!</string>
+    <string name="landing_msg">"Welcome, "</string>
+    <string name="profile_preview">Employee information is viewed here.</string>
+    <string name="update_button">Update Information</string>
+    <string name="schedule_button">View Schedule</string>
+    <string name="logout_button">Logout</string>
+    <string name="menu_title1">Schedule Menu</string>
+    <string name="current_week_button">Current Week</string>
+    <string name="workday_button">Current Day</string>
+    <string name="emp_main_button">Home</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="customer">Customer</string>
+    <string name="status">Status</string>
 </resources>

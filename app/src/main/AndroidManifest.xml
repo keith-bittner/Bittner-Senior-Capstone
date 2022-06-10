@@ -25,6 +25,8 @@
         <activity android:name=".AccountLogin"></activity>
         <activity android:name=".EmployeeMain"></activity>
         <activity android:name=".ManagerMain"></activity>
+        <activity android:name=".ScheduleMenu"></activity>
+        <activity android:name=".EmployeeWorkday"></activity>
     </application>
 
 </manifest>
