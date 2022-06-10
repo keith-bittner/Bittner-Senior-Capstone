@@ -8,7 +8,7 @@
 
     <TextView
         android:id="@+id/workday_date"
-        android:layout_width="wrap_content"
+        android:layout_width="75dp"
         android:layout_height="50dp"
         android:gravity="center"
         android:text="@string/date"
@@ -16,7 +16,7 @@
 
     <TextView
         android:id="@+id/workday_time"
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_toEndOf="@id/workday_date"
         android:layout_toRightOf="@id/workday_date"
@@ -26,7 +26,7 @@
 
     <Button
         android:id="@+id/workday_customer"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_toEndOf="@id/workday_time"
         android:layout_toRightOf="@id/workday_time"
@@ -34,7 +34,7 @@
 
     <TextView
         android:id="@+id/workday_status"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_toEndOf="@id/workday_customer"
         android:layout_toRightOf="@id/workday_customer"

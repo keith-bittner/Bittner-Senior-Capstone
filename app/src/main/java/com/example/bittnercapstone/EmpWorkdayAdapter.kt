@@ -33,7 +33,7 @@ class EmpWorkdayAdapter(context:Context, mTaskList: MutableList<ScheduleObject>)
         listRowHolder.scheduledCustomer.text = customer
 
         listRowHolder.scheduledCustomer.setOnClickListener {
-            view.context.startActivity(Intent(view.context, ScheduleMenu::class.java))
+            view.context.startActivity(Intent(view.context, CustomerJob::class.java))
         }
 
         listRowHolder.scheduledStatus.text = status

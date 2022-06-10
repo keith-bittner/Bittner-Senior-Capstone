@@ -28,6 +28,7 @@
         android:layout_marginStart="18dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="18dp"
+        android:overScrollMode="always"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo_nwlawn">
@@ -64,13 +65,14 @@
     <ListView
         android:id="@+id/list_view"
         android:layout_width="375dp"
-        android:layout_height="375dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginEnd="18dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="16dp"
         android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/emp_main_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tableRow" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/emp_main_button"
@@ -78,13 +80,13 @@
         android:layout_height="50dp"
         android:layout_marginStart="106dp"
         android:layout_marginEnd="105dp"
-        android:layout_marginBottom="11dp"
+        android:layout_marginBottom="9dp"
         android:backgroundTint="@color/green_1"
         android:text="@string/emp_main_button"
         android:textColor="#4E342E"
         app:layout_constraintBottom_toTopOf="@+id/copyright"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView

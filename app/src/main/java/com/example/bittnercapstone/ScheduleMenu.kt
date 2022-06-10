@@ -3,6 +3,7 @@ package com.example.bittnercapstone
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 
 class ScheduleMenu : AppCompatActivity() {
@@ -12,6 +13,7 @@ class ScheduleMenu : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.schedule_menu)
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
 
         day_button = findViewById(R.id.workday_button)
         day_button.setOnClickListener {
